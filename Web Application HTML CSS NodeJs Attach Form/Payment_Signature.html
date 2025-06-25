@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Payment And Singature
+  </title>
+  <link rel="stylesheet" href="/pay_sign.css">
+  <link rel="stylesheet" href="/openpopup.css">
+  <link rel="stylesheet" type="text/css" href="/noti.css">
+
+</head>
+
+<body>
+
+  <div class="navbar">
+    <div class="left-icons">
+      <img src="ictlogo.png" alt="Ictlogo Icon" class="logo-icon">
+    </div>
+    <div class="main-title" style="color: rgba(9, 44, 76, 1); margin-left: 15px;">
+      <div class="approve">Editing Student Information Request </div>
+      <div class="sub-links">
+
+        <a class="home" href="/homepage">Home</a>
+        <a class="pay" href="/Payment">Payment</a>
+
+      </div>
+    </div>
+
+    <div class="right-icons">
+      <!-- <img src="noti.jpg" alt="Notification Icon" class="notification-icon"> -->
+      <img src="profile.png" alt="Profile Image" class="profile-image">
+    </div>
+  </div>
+
+
+  <h1>
+    Payment
+  </h1>
+  <div class="center">
+    <form id="payment-form" name="frm">
+      <img width="400px" height="700px" src="/payment.jpg">
+      <br>
+      <div>Payment</div>
+      <br>
+      <select id="payment-option">
+        <option value="0"> </option>
+        <option value="20">20 Baht</option>
+
+      </select>
+      <br>
+
+      <!-- <input class="subpay" id="openPopup" onclick="return CheckMoney();" type="submit" value="submit" /> -->
+
+      <div id="popupBox" class="popup">
+        <div class="popup-content">
+          <span class="close">&times;</span>
+          <div id="Msgbypay"></div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+
+  <h1>
+    Signature
+  </h1>
+  <!-- File input field -->
+  <p>Please upload your image here (Supports: JPG, JPEG, PNG ,PDF(A4))</p>
+  <form name="frm">
+    <br>
+
+    <input type="file" id="file" onchange="return fileValidation()" />
+
+    <!-- Image preview -->
+    <div id="imagePreview"></div>
+    <br>
+    <div class="btn-openpop">
+      <input class="fileimage" id="openPopup2" onclick="return Checkimage()" type="submit" value="submit" />
+    </div>
+    <div id="popupBox2" class="popup2">
+      <div class="popup-content2">
+        <span class="close2">&times;</span>
+
+        <div id="Msgbyfile"></div>
+      </div>
+    </div>
+  </form>
+
+  <!--  Confirm Form -->
+  <h1>
+    Confirm Information
+  </h1>
+  <br>
+  <div class="btn-openpop">
+    <button id="openPopup4" type="submit">ok</button>
+  </div>
+  <div id="popupBox4" class="popup4">
+    <div class="popup-content4">
+      <span class="close4">&times;</span>
+      <h1>Are you sure?</h1>
+      <p>Are you sure want to change your information?</p>
+      <div class="btn">
+        <a href="/homepage">
+          <button>Confirm</button>
+        </a>
+        <a href="/Payment">
+          <button>Cancle</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <!--Validate-->
+  <script src="checkfile_empty.js"></script>
+</body>
+
+</html>

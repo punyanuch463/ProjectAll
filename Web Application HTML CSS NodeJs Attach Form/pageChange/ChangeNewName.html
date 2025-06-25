@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" type="text/css" href="/noti.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="/openpopup.css"> 
+
+<body>
+
+  <div class="navbar">
+    <div class="left-icons">
+          <img src="ictlogo.png" alt="Ictlogo Icon" class="logo-icon">
+    </div>
+    <div class="main-title" style="color: rgba(9, 44, 76, 1); margin-left: 15px;">
+        <div class="approve" >Editing Student Information Request</div>
+        <div class="sub-links" >
+
+   
+          <a class="home"href="/homepage">Home</a>
+          <a class="edit"  href="/ChangeNewName">Editing New Name</a>
+         
+</div>
+</div>
+
+<div class="right-icons">
+
+<img src="profile.png" alt="Profile Image" class="profile-image">
+</div>
+</div>
+
+
+
+  <div class="wholecontainer">
+    <form  onsubmit="return newname()">
+      <section>
+
+        <div class="select-option" style="width:300px;">
+          Name - Surname <br>
+          <select id="mySelect" class="form-select mt-3">
+            <option value="" selected hidden>Select Option</option>
+            <option>Change name - surname</option>
+            <option>Editing spelling</option>
+          </select>
+        </div>
+
+        <br>
+        <div class="container mt-3" style="width:500px;">
+        Name - Surname(NEW) <br>
+        <input type="text" id="ntname" class="form-control mt-3" size="30" name="ntname" placeholder="Thai" style="background-color: #F2F4F8;"><br>
+        <input type="text" id="nename" class="form-control mt-3" size="30" name="nename" placeholder="English" style="background-color: #F2F4F8;"><br>
+      </div>
+    </section>
+        <div class="button-container">
+          <!-- <p><button class="btn-back" type="next">Back</button></p>
+          <p><button class="btn-back" type="next">Next</button></p> -->
+          <a  class="btn-primary" href="/ChangeOldName">Back</a>
+          <!-- <a  class="btn-primary" href="/AttachName">Next</a> -->
+          <a class="btn-primary"  id="openPopup" onclick="return okpopup();" type="submit" >Next</a>
+        </div>
+          <div id="popupBox" class="popup">
+            <div class="popup-content">
+              <span class="close">&times;</span>
+              
+              <h1>Are you sure?</h1>
+              <p>Are you sure want to change your information?</p>
+              <div class="btnbyname">
+              <a class="btn-primary" href="/AttachName"> Confirm </a>
+              <a href="/ChangeNewName" class="btn-primary">Cancle </a>
+              </div>
+
+            </div>
+        </div>
+        
+
+        <!-- <input type="submit" value="Submit"> -->
+
+    </form>
+
+  </div>
+  
+
+  <script src="noti.js"></script>
+  <script src="/checkname.js"></script>
+  <!-- <script src="/checkfileAttach.js"></script> -->
+</body>
+
+</html>

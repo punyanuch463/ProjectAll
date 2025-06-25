@@ -1,0 +1,91 @@
+
+
+  .text-center {
+    text-align: center;
+    margin-top: 40px; 
+    font-family: 'Inter', sans-serif;
+    color: #092C4C;
+  }
+  .preview-container {
+    width: 1038px;
+    height: 450px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 1px;
+    padding: 20px;
+    box-shadow: 0 2px 4px 2px rgb(193, 193, 193), 0 -2px 4px 2px rgba(193, 193, 193, 1);
+  }
+
+  .input-group {
+    margin-bottom: 40px;
+    font-family: 'Inter', sans-serif;
+    color: #092C4C;
+  }
+
+  .inner-border {
+    border: 5px solid #ccc;
+    margin-top: 50px;
+  }
+
+  .black-border {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .form-container {
+    width: 1038px;
+    margin: 40px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  .form-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .namesur {
+    font-family: 'Inter', sans-serif;
+    color: #092C4C;
+  }
+  /* ปรับขนาดของ input ในตาราง */
+  table input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #828282;
+    border-radius: 6px;
+    margin-bottom: 10px; /* เพิ่มระยะห่างระหว่าง input */
+  }
+
+  /* ปรับขนาดของตารางและระยะห่างระหว่างข้อมูล */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* เพิ่มระยะห่างระหว่างตาราง */
+  }
+
+  /* ปรับการจัดให้ข้อมูลของแต่ละ column อยู่บนบรรทัดเดียวกัน */
+  table td {
+    padding: 10px;
+  }
+  img{
+    width: 400px;
+    /* height: 520px; */
+  }
+  .text-success{
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+  }
+  .text-danger{
+    font-weight: bold;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 10px;
+  }

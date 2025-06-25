@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Send Email</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="/noti.css">
+    <link rel="stylesheet" type="text/css" href="/email.css">
+    
+    <script src="checkemail.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("3BTS-Il44WBjA7XR7");
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="navbar">
+        <div class="left-icons">
+              <img src="/ictlogo.png" alt="Ictlogo Icon" class="logo-icon">
+        </div>
+        <div class="main-title" >
+          <div class="approve" >Approving Student Information Request form </div>
+          <div class="sub-links" >
+              <a href="/Approve" >Home</a>
+              <a href="/ApproveName" >Name-Surname</a>
+              <a href="/ApproveAddr" >Address</a>
+              <a href="/ApproveMob" >Mobile Phone</a>
+              <a href="/email">Email</a>
+            </div>
+        </div>
+        <div class="right-icons">
+          <img src="/noti.jpg" alt="Notification Icon" class="notification-icon">
+          <img src="/profile.png" alt="Profile Image" class="profile-image">
+        </div>
+      </div> <br><br><br>
+
+    <div class="container border mt-3 bg-light">
+      <div class="row">
+        <div id="bg-primary" class="col-md-4 p-3">
+          <h1>ฝ่ายทะเบียน </h1>
+          <br>
+          <br>
+
+          <h3>
+            ขอสงวนสิทธิ์ให้เฉพาะ อาจารย์ผู้ที่มีสิทธิ์เข้าถึง สามารถกรอกข้อมูลในเอกสารนี้ได้เท่านั้น
+          </h3>
+        </div>
+        <div class="col-md-7 border-left py-4">
+          <h1>Send Email</h1>
+          <div class="form-group">
+            <h5 for="name">Name</h5>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter Name"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="id">ID</h5>
+            <input
+              type="number"
+              class="form-control"
+              id="id"
+              placeholder="Enter ID"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="subject">Subject</h5>
+            <input
+              type="text"
+              class="form-control"
+              id="subject"
+              placeholder="Enter subject"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="email">Email</h5>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Enter email"
+            />
+          </div>
+          <div class="form-group">
+            <h5 for="message">Message</h5>
+            <textarea class="form-control" id="message" rows="3"></textarea>
+          </div>
+          <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup_noti" id="popup_noti">
+      <div class="popup-content_noti">
+        <span class="close_noti" id="close_noti">&times;</span>
+        <!-- เนื้อหาของ popup ที่คุณต้องการแสดง -->
+        <div class="container_noti">
+          <header>
+            <div class="notif_box">
+
+              <h2 class="title">Notifications</h2>
+              <span id="notifes"></span>
+            </div>
+            <p>You have a new notification!</p>
+            <p id="mark_all">Mark all as read</p>
+            
+          </header>
+          <main>
+            <div class="notif_card unread">
+              <img src="https://pbs.twimg.com/media/C8SFjSbXgAAKoZx.jpg" class="avatar" alt="avatar" />
+              <div class="description">
+                <p class="user_activity">
+                  <strong>Talabporn Watthicharoenkit</strong>
+                  <!-- <b>Request permission to editing spelling</b> -->
+                </p>
+                Request permission to editing spelling
+                <p class="time">10 mins ago</p>
+              </div>
+            </div>
+            <div class="notif_card unread">
+              <img src="https://pbs.twimg.com/media/C8SFjSbXgAAKoZx.jpg" class="avatar" alt="avatar" />
+              <div class="description">
+                <p class="user_activity">
+                  <strong>Busakorn Saeheng</strong>
+                </p>
+                Request permission to change permanent address
+                <p class="time">10 mins ago</p>
+              </div>
+            </div>
+            <div class="notif_card unread">
+              <img src="https://pbs.twimg.com/media/C8SFjSbXgAAKoZx.jpg" class="avatar" alt="avatar" />
+              <div class="description">
+                <p class="user_activity">
+                  <strong>Pimpisa Apipim</strong> 
+                </p>
+                Request permission to change name-surname
+                <p class="time">10 mins ago</p>
+              </div>
+            </div>
+            
+            <div>
+              <div class="notif_card">
+                <img
+                src="https://pbs.twimg.com/media/C8SFjSbXgAAKoZx.jpg" class="avatar" alt="avatar"
+              />
+              <div class="description">
+                <p class="user_activity">
+                  <strong>Kotchaporn Suwannarat</strong>
+                </p>
+                Request permission to change mobile phone
+                <p class="time">10 mins ago</p>
+              </div>
+              
+            </div>
+            </div>
+            
+            <div class="notif_card">
+              <img src="https://pbs.twimg.com/media/C8SFjSbXgAAKoZx.jpg" class="avatar" alt="avatar" />
+              <div class="description">
+                <p class="user_activity">
+                  <strong>Punyanuch Mongkonthipparat</strong>
+                </p>
+                Request permission to change permanent address
+                <p class="time">1 week ago</p>
+              </div>
+            </div>
+            <div class="notif_card">
+              <img src="https://pbs.twimg.com/media/C8SFjSbXgAAKoZx.jpg" class="avatar" alt="avatar" />
+              <div class="description">
+                <p class="user_activity">
+                  <strong>Sam Smith</strong>
+                </p>
+                Request permission to change name-surname
+                <p class="time">2 weeks ago</p>
+              </div>
+            </div>
+            <div class="notif_card">
+              <img src="https://pbs.twimg.com/media/C8SFjSbXgAAKoZx.jpg" class="avatar" alt="avatar" />
+              <div class="description">
+                <p class="user_activity">
+                  <strong>Olivia Rodrigo</strong>
+                </p>
+                Request permission to change mobile phone
+                <p class="time">2 weeks ago</p>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <script src="noti.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+nav {
+    width: 100%;
+    background: #006C6C;
+    display:block;
+    font-family: sans-serif;
+  }
+
+  /*กำหนดทั้งหมดให้เข้ามาอยู่ในบรรดทัดเดียวกัน*/
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+  }
+
+  /*ให้ห่างกัน 20 px*/
+  nav ul li {
+   float: left; /*สร้างให้อยู่ในกล่องเดียวกัน*/
+  }
+
+  /*เมื่อนำเมาส์ไปวางจะกระพริบ*/
+  nav ul li a:hover {
+    color:  #FFFFC9;
+  }
+
+  /*กำหนดแต่ละตัวอักษรให้เอาเส้นใต้ nav ออก*/
+  nav ul li a {
+    padding: 20px;
+    display: inline-block;
+    color: white;
+    text-decoration: none; /*เอาเส้นใต้ nav ออก*/
+  }
+
+  .editinfo{
+    text-decoration: underline;
+  }
+
+  button.btn-back {
+    font-family: sans-serif;
+    border-radius: 5px;
+    padding: 12px 35px;
+    color: white;
+    background-color: #006C6C;
+    border: 5px none f#006C6C;
+    cursor: pointer;
+}
+
+
+button:hover {
+  background-color: #006C6C;
+  color: #FFFFC9;
+}
+
+.select-option{
+  color: black;
+}
+
+.wholecontainer {
+  padding: 10px;
+  width: 75%;
+  margin: auto;
+  align-items: center;
+}
+
+section{
+  display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.plaintext{
+  display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
