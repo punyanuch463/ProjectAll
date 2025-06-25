@@ -1,0 +1,138 @@
+/*-------Title&Year--------*/
+.title{
+  width: 45%;
+  padding: 5px;
+}
+.year{
+  width: 20%;
+}
+
+/*--------table information in popup popup----------*/
+table{
+  border-collapse: collapse;
+}
+th, td{
+  padding: 2px;
+  text-align: center;
+  border-bottom: 2px solid #ddd;  
+}
+/*--------popup page------------*/
+.block{
+  background-color: rgb(173, 173, 173);
+  padding: 20px;
+  border-radius: 10px;
+}
+.block img.left{
+  padding: 5px;
+  float: top;
+  max-width:max-content;
+}
+img.full{
+  width: 700px;
+  height: 500px;
+}
+img.left{
+  float: left;
+  padding: 10px;
+  width: 500px;
+  height: 400px;
+}
+/*------------หน้า movie --------------*/
+html{
+  text-align: center;
+  background-color: antiquewhite;
+}
+h1.movieserach{
+   text-align: center;
+   font-size: 90px;
+  padding: 5px;
+   
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.movies {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.movie {
+  padding: 5px 25px 10px 25px;
+  max-width: 50%;
+}
+/*--การกดปุ๋ม---*/
+button.link{
+  padding: 6px;
+  border-radius: 3px; 
+  width: 10%;
+  height: inherit;
+  background-color: #282c34;
+}
+/*ตัวหนังสือใน button*/
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
+button.searchs{
+  padding: 5px;
+  border-radius: 3px; 
+  width: 10%;
+  height: inherit;
+  background-color: #282c34;
+  color: antiquewhite;
+} 
+/*hover เมื่อวางเมาส์ไว้จะเปลี่ยนสี*/
+button.searchs:hover{
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+input{
+  padding: 4px;
+  border-radius: 3px;
+}
+
+/*-----------------ปรับหน้าจอให้มีความสัมพันธ์กัน-------------------*/
+@media screen and (max-width: 1400px) {
+img.full{
+  padding: 10px;
+  width: 500px;
+  height: 300px;
+}
+}
+@media screen and (min-width: 694px) and (max-width: 1000px) {
+  .movie {
+    max-width: 55%;
+    
+  }
+  img.full{
+    padding: 10px;
+    width: 300px;
+    height: 200px;
+  }
+}
+
+
+@media screen and (min-width: 652px) and (max-width: 693px) {
+  .movie {
+    max-width: 50%;
+  }
+  img.full{
+    width: 300px;
+    height: 200px;
+  }
+}
+
+
+@media screen and (max-width: 651px) {
+  .movie {
+    max-width: 100%;
+    margin: auto;
+  }
+  img.full{
+    width: 300px;
+    height: 200px;
+  }
+}

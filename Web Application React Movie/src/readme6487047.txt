@@ -1,0 +1,33 @@
+sec1_HW_ID6487047
+วิธีการใช้งาน
+  - cd mymovie
+  - npm start
+  - เมื่อเข้าสู่ระบบ จะเข้าหน้า normal search เพราะเรากำหนด rootไว้กับตัว normalsearchเเละ สามารถค้นหา ชื่อของภาพยนต์ 
+  - เมื่อต้องการ search ด้วยวิธีอื่น ให้ กดเข้า advance search จะสามารถ search ได้ดังนี้
+    1.movie Type 
+        ex: westem , scifi , mystery ,romance ,horor,comedy ,action
+    2.Year
+        ex: 2011 , 2022 , 2015 
+    3.Mutiple search
+        3.1 title+Year
+            ex: title :Iron man, Year :2011
+        3.2 Year to Year 
+            ex: year : 2011 to  year :2012
+  -เมื่อ search ตามที่ต้องการจะมีชื่อ รูปภาพ เเละวันที่ของภาพยนต์ขึ้นมา หากต้องการดูรายละเเอียดให้กด
+  open details 
+  -Open details มีข้อมูลของ detail,year,languge,popularity,vote_avg,sec1_HW_ID6487047
+  -กด Esc เพื่อออกจากหน้า detail หรือ กด close
+**หมายเหตุ : **
+1.เนื่องจาก API ที่เอามามีเงื่อนไขในการสร้าง path ที่จะค้นหาได้ยังตรงตัว เเละมีข้อจำกัดเยอะ 
+จึงทำให้การค้นหาต้องเเยกช่องในการใส่ input เข้าไปเพื่อง่ายต่อการสร้าง path API ที่จะสามารถเชื่อมต่อกับเว็บสาธารณะได้
+2.เนื่องเดียว API ที่เอามาการประกาศหาค่าบางเวลามีความเร็วในการส่งข้อมูลที่ติดขัดจึงอาจจะไม่ได้ข้อมูลในทันที วิธีเเก้ ให้ ทดลองกดใหม่ ซ้ำ หรือ
+restart program
+องค์ประกอบงาน
+|-mymovie
+  |-src
+   |-App.js
+   |-App.css
+   |-index.js
+   |-advancesearch.js
+   |-normalsearch.js
+   |-readme6487047
